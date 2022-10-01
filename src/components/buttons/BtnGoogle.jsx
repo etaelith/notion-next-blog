@@ -1,12 +1,13 @@
-import { useNavigate } from "react-router-dom";
+/* import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-
+ */
 const BtnGoogle = () => {
-  const navigate = useNavigate()
-  const {loginWithGoogle} = useAuth()
-  const handleLogGoogle = async() => {
-    await loginWithGoogle()
-    navigate('/')
+/*   const navigate = useNavigate()
+  const {loginWithGoogle} = useAuth() */
+  const handleLogGoogle = /* async */() => {
+    console.log('log google')
+  /*   await loginWithGoogle()
+    navigate('/') */
   };
 
   return (

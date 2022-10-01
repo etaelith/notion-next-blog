@@ -1,12 +1,12 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../../../my-app/src/context/AuthContext";
+
 
 const BtnApple = () => {
-  const navigate = useNavigate()
+/*   const navigate = useNavigate()
   const {loginWithApple} = useAuth()
-  const handleLogApple = async() => {
-    await loginWithApple()
-    navigate('/')
+ */  const handleLogApple = /* async */() => {
+    console.log('log apple')
+   /*  await loginWithApple()
+    navigate('/') */
   }
   return (
     <button
