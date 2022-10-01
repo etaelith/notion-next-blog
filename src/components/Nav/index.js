@@ -8,7 +8,7 @@ export default function Nav() {
         <Link href="/">
           <div className={styles.logoContainer}>
             <div className={styles.square}></div>
-            <h1>Juani Gallo</h1>
+            <h1 className="text-red-700">Etaelith</h1>
           </div>
         </Link>
       </div>

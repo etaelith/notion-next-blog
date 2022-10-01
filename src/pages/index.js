@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import { Client } from "@notionhq/client";
 import Entry from "../components/Entry";
+import Header1 from "../components/Header1";
 import Nav from "../components/Nav";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
@@ -10,11 +11,11 @@ export default function Home({ entries }) {
   return (
     <>
       <Head>
-        <title>Juani Gallo - Blog</title>
-        <meta name="description" content="Juani Gallo's blog" />
+        <title>Etaelith - Blog</title>
+        <meta name="description" content="Etaelith's blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <Header1 />
       <div className={styles.container}>
         <section className={styles.entries}>
           {entries.length == 0 && "There are no entries"}

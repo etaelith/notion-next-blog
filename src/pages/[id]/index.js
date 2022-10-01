@@ -1,6 +1,7 @@
 import { Client } from "@notionhq/client";
 import Link from "next/link";
 import Block from "../../components/Block";
+import Header1 from "../../components/Header1";
 import Nav from "../../components/Nav";
 import styles from "../../styles/Home.module.scss";
 
@@ -9,7 +10,7 @@ const notion = new Client({ auth: process.env.NOTION_TOKEN });
 export default function Post({ blocks }) {
   return (
     <>
-      <Nav />
+      <Header1 />
       <div className={styles.container}>
         <div className={styles.back}>
           <Link href="/">← Back to list</Link>
