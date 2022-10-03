@@ -1,13 +1,11 @@
-
-
 const BtnApple = () => {
-/*   const navigate = useNavigate()
+  /*   const navigate = useNavigate()
   const {loginWithApple} = useAuth()
- */  const handleLogApple = /* async */() => {
-    console.log('log apple')
-   /*  await loginWithApple()
+ */ const handleLogApple = /* async */ () => {
+    console.log("log apple");
+    /*  await loginWithApple()
     navigate('/') */
-  }
+  };
   return (
     <button
       type="button"

@@ -15,7 +15,7 @@ const NotActiveClassName = `text-gray-300 hover:bg-gray-700 hover:text-white px-
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
-const Header1 = () => {
+const Header = () => {
   const user  = 'user'
 
   const handleLogout =  () => {
@@ -23,7 +23,7 @@ const Header1 = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gray-800 mb-5">
+    <Disclosure as="nav" className="bg-gray-800 mb-8">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -52,8 +52,8 @@ const Header1 = () => {
                     alt="Your Company"
                   />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                <div className="hidden sm:ml-6 sm:flex">
+                  <div className="flex items-center space-x-4">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
@@ -176,4 +176,4 @@ const Header1 = () => {
   );
 };
 
-export default Header1;
+export default Header;

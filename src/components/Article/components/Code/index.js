@@ -1,5 +1,5 @@
 import styles from './style.module.scss'
-import Tag from '../../../Tag'
+import Tag from '@components/Tag'
 
 export default function Code({ language, blocks }) {
   function parseAnnotations(text) {

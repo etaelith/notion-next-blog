@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Link from "next/link";
-import BtnApple from "../components/buttons/BtnApple";
-import BtnFb from "../components/buttons/BtnFb";
-import BtnGoogle from "../components/buttons/BtnGoogle";
-import BtnMM from "../components/buttons/BtnMM";
-import BtnOW from "../components/buttons/BtnOW";
-import HrSpace from "../components/HrSpace";
+import BtnApple from "@Buttons/BtnApple";
+import BtnFb from "@Buttons/BtnFb";
+import BtnGoogle from "@Buttons/BtnGoogle";
+import BtnMM from "@Buttons/BtnMM";
+import BtnOW from "@Buttons/BtnOW";
+import HrSpace from "@components/HrSpace";
+import Image from "next/image";
 
 const navigation =  "/" ;
 export default function Login() {
@@ -31,18 +32,21 @@ export default function Login() {
     }
   };
   return (
+    <>
     <section className="bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
         <Link
           href={navigation}
-          className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
+          className="mb-6 text-2xl font-semibold text-gray-900 dark:text-white"
         >
-          <a>
-            <img
+          <a className="flex flex-col">
+            <Image
              href={navigation}
-              className="w-8 h-8 mr-2"
+              className="w-8 h-8"
               src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg"
               alt="logo"
+              width={54}
+              height={54}
             />
             <p>Flowbite</p>
           </a>
@@ -144,6 +148,6 @@ export default function Login() {
           </div>
         </div>
       </div>
-    </section>
+    </section></>
   );
 }
