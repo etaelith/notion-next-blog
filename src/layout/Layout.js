@@ -1,13 +1,14 @@
 import Header from "@components/Header";
+import useDarkMode from "hooks/useDarkMode";
 
 export default function Layout({ children }) {
+  
   return (
     <>
-      <html className="dark">
-        <Header />
+    
+      <Header />
 
-        <main>{children}</main>
-      </html>
+      <main>{children}</main>
     </>
   );
 }
