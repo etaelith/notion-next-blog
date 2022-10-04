@@ -1,8 +1,14 @@
+import { useAuth } from "context/AuthContext"; 
 const BtnFb = () => {
+  const {loginWithFacebook} = useAuth()
+  const handleLogFacebook = async () => {
+    await loginWithFacebook()
+  }
   return (
     <button
       type="button"
       className="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2"
+      onClick={handleLogFacebook}
     >
       <svg
         className="mr-2 -ml-1 w-8 h-8"

@@ -1,18 +1,17 @@
-/* import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/AuthContext";
- */
+import { useAuth } from "context/AuthContext";
+
 const BtnGoogle = () => {
-/*   const navigate = useNavigate()
-  const {loginWithGoogle} = useAuth() */
-  const handleLogGoogle = /* async */() => {
-    console.log('log google')
-  /*   await loginWithGoogle()
-    navigate('/') */
+  const { loginWithGoogle } = useAuth();
+  
+  const handleLogGoogle = async () => {
+    console.log("log google");
+    await loginWithGoogle();
   };
 
   return (
     <button
-      type="button" onClick={handleLogGoogle}
+      type="button"
+      onClick={handleLogGoogle}
       className="text-white bg-[#4285F4] hover:bg-[#4285F4]/90 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#4285F4]/55 mr-2 mb-2"
     >
       <svg

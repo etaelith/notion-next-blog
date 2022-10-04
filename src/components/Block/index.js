@@ -2,7 +2,7 @@ import Code from "@Article/Code";
 import Heading1 from "@Article/Heading1";
 import Heading2 from "@Article/Heading2";
 import Heading3 from "@Article/Heading3";
-import Image from "@Article/Image";
+import Imags from "@Article/Image";
 import List from "@Article/List";
 import Paragraph from "@Article/Paragraph";
 
@@ -17,7 +17,7 @@ export default function Block({ data }) {
       heading_2: (heading) => <Heading2 blocks={heading.rich_text} />,
       heading_3: (heading) => <Heading3 blocks={heading.rich_text} />,
       bulleted_list_item: (listItem) => <List blocks={listItem.rich_text} />,
-      image: (image) => <Image url={image.file.url} alt={image.file.url}/>
+      image: (image) => <Imags url={image.file.url} alt='image-blog'/>
     };
 
     return types[type] ? types[type](blockData[type]) : "";
