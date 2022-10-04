@@ -40,3 +40,15 @@ Now you can create a description column in your database and start writing your 
 ![image](https://user-images.githubusercontent.com/4969737/190541698-2f4096b8-22d6-4741-9b6c-3049800f27e9.png)
 
 
+## Firebase
+
+### Use the project with your own Firebase instance
+
+- Create a new project in the [Firebase console][3].
+
+- Click *Add Firebase to your web app*
+
+
+
+#### anotations
+[1]: https://firebase.google.com/
