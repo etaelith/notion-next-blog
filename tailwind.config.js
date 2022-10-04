@@ -8,8 +8,13 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    typography: (theme) => ({}),
+    extend: {
+      colors: {
+        gradientblack: '#333333'
+      }
+    },
   },
-  darkMode: ["class", '[data-mode="dark"]'],
-  plugins: [],
+  darkMode: ["class"],
+  plugins: [require('@tailwindcss/typography')],
 };

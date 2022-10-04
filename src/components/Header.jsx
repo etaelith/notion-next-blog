@@ -20,7 +20,7 @@ const Header = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gray-800 ">
+    <Disclosure as="nav" className="bg-gradient-to-r from-black to-gradientblack">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -69,7 +69,7 @@ const Header = () => {
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
-                    <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                    <Menu.Button className="cursor-pointer flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <Image
                         className="rounded-full"
@@ -89,20 +89,20 @@ const Header = () => {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="flex flex-col absolute -right-4 z-10 w-48 origin-top-right rounded-md bg-gray-800 text-wh py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="flex flex-col absolute -right-4 z-10 w-48 origin-top-right rounded-md bg-gradientblack text-wh py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Link href="/logup" className="text-gray-700">
-                        <p className="text-sm text-center">Register</p>
+                        <p className="cursor-pointer text-sm text-center">Register</p>
                       </Link>
 
-                      <Link href="/login" className=" text-gray-700">
-                        <p className="text-sm text-center">Log In</p>
+                      <Link href="/login" className="text-gray-700">
+                        <p className="cursor-pointer text-sm text-center">Log In</p>
                       </Link>
 
                       <p className="text-center font-bold">{(!user) ? 'Tag Name': user.email}</p>
 
                       <button
                         onClick={handleLogout}
-                        className="block px-4 py-2 text-sm text-gray-700"
+                        className="cursor-pointer block px-4 py-2 text-sm text-gray-700"
                       >
                         Sign out
                       </button>

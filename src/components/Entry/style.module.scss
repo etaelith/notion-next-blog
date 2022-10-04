@@ -1,4 +1,5 @@
 .entry {
+
   border: 1px solid #333;
   background: linear-gradient(269.74deg, #191919 23.75%, transparent 92.54%),
     linear-gradient(180deg, #191919 0, transparent 100%),
@@ -11,9 +12,13 @@
   margin: 24px 10px;
   &::before {
     position: absolute;
-    background: linear-gradient(360deg, #191919 23.75%, transparent 92.54%),
-      linear-gradient(360deg, #191919 0, transparent 100%),
-      linear-gradient(to right, #191919, #333), #111;
+    background: linear-gradient(
+        360deg,
+        rgb(25, 25, 25) 23.75%,
+        transparent 92.54%
+      ),
+      linear-gradient(360deg, rgb(25, 25, 25) 0, transparent 100%),
+      linear-gradient(to right, rgb(25, 25, 25), #333333), rgb(17, 17, 17);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.25s linear;
@@ -34,7 +39,17 @@
 }
 .tags {
   display: flex;
+
 }
+.heart {
+  position: absolute;
+  width: 2rem;
+  height: auto;
+  right: 0;
+  margin-right: 1.1rem;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 768px) {
   .entry {

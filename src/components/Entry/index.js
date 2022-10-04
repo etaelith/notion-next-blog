@@ -5,13 +5,16 @@ import Title from "@components/Title";
 import Tag from "@components/Tag";
 import Description from "@components/Description";
 
+import { HeartIcon} from '@heroicons/react/24/outline'
+
 export default function Entry({ data }) {
 
   return (
     <Link href={`/${data.niceUrl}`}>
       <div className={styles.entry}>
+        <HeartIcon className={styles.heart}/>
         <Title title={data.name} />
-        <section className={styles.tags}>
+        <section className={styles.tags} >
           {data.tags.map((tag, key) => {
             return <Tag key={key} color={tag.color} name={tag.name} />;
           })}

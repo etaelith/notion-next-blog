@@ -8,7 +8,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #191919;
+  background: linear-gradient(to right, #000,#333333);
   color: #FFF;
 }
 
