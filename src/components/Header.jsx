@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useAuth } from "context/AuthContext";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -57,7 +57,7 @@ const Header = () => {
                       Categories
                     </Link>
                     <Link
-                      href="/Questions"
+                      href="/questions"
                       className={(navData) =>
                         navData.isActive ? activeClassName : NotActiveClassName
                       }

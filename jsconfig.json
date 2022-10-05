@@ -6,7 +6,8 @@
             "@components/*":["components/*"],
             "@Article/*":["components/notion/article/components/*"],
             "@Buttons/*":["components/buttons/*"],
-            "@Notion/*":["components/notion/*"]
+            "@Notion/*":["components/notion/*"],
+            "@Notiontw/*":["components/notiontw/*"]
         }
     }
 }

@@ -1,0 +1,34 @@
+.tag {
+  padding: 4px 8px;
+  margin: 0 8px 0 0;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+.brown {
+  background-color: #eee0da;
+  color: #191919;
+}
+
+.red {
+  background-color: #ffe2dd;
+  color: #191919;
+}
+
+.purple {
+  background-color: #b36cde;
+  color: #191919;
+}
+
+.yellow {
+  background-color: #ffcd65;
+  color: #191919;
+  &.white {
+    color: #fff;
+  }
+}
+
+.green {
+  background-color: #67e6a7;
+  color: #191919;
+}
