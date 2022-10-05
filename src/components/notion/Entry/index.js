@@ -1,9 +1,9 @@
 import Link from "next/link";
 import styles from "./style.module.scss";
 
-import Title from "@components/Title";
-import Tag from "@components/Tag";
-import Description from "@components/Description";
+import Title from "@Notion/Title";
+import Tag from "@Notion/Tag";
+import Description from "@Notion/Description";
 
 import { HeartIcon} from '@heroicons/react/24/outline'
 

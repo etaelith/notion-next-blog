@@ -1,6 +1,6 @@
 import { Client } from "@notionhq/client";
 import Link from "next/link";
-import Block from "@components/Block";
+import Block from "@Notion/Block";
 import styles from "../../styles/Home.module.scss";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });

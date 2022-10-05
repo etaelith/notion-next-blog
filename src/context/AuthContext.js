@@ -20,22 +20,27 @@ export const useAuth = () => {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
-  const signup = (email, password) =>
-    createUserWithEmailAndPassword(auth, email, password);
-
+  const [error, setError] = useState(null);
+  const signup = async (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password).catch((error) =>
+      setError(error.message)
+    );
+  };
   const signin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password);
-    console.log(email);
+    return signInWithEmailAndPassword(auth, email, password).catch((error) =>
+      setError(error.message)
+    );
   };
 
   const logout = () => {
     signOut(auth);
-    console.log("logout");
   };
 
   const loginWithGoogle = () => {
     const googleProvider = new GoogleAuthProvider();
-    return signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider).catch((error) =>
+      setError(error.message)
+    );
   };
 
   const loginWithApple = () => {
@@ -45,12 +50,13 @@ export function AuthProvider({ children }) {
 
   const loginWithFacebook = () => {
     const facebookProvider = new FacebookAuthProvider();
-    return signInWithPopup(auth, facebookProvider);
+    return signInWithPopup(auth, facebookProvider).catch((error) =>
+      setError(error.message)
+    );
   };
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(currentUser)
     });
   }, []);
 
@@ -64,6 +70,8 @@ export function AuthProvider({ children }) {
         loginWithFacebook,
         logout,
         user,
+        error,
+        setError,
       }}
     >
       {children}

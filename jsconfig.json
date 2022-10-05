@@ -4,8 +4,9 @@
         "paths": {
             "@layout/*":["layout/*"],
             "@components/*":["components/*"],
-            "@Article/*":["components/article/components/*"],
+            "@Article/*":["components/notion/article/components/*"],
             "@Buttons/*":["components/buttons/*"],
+            "@Notion/*":["components/notion/*"]
         }
     }
 }

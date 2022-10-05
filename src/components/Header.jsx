@@ -9,9 +9,6 @@ import mark from "../public/mark.svg";
 const activeClassName = `bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium`;
 const NotActiveClassName = `text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium`;
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 const Header = () => {
   const { logout, user } = useAuth();
 
@@ -20,7 +17,10 @@ const Header = () => {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gradient-to-r from-black to-gradientblack">
+    <Disclosure
+      as="nav"
+      className="bg-gradient-to-r from-black to-gradientblack"
+    >
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -38,11 +38,13 @@ const Header = () => {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <Image
-                    className="hidden h-8 w-auto lg:block relative"
-                    src={mark}
-                    alt="Your Company"
-                  />
+                  <Link href="/">
+                    <Image
+                      className="hidden h-8 w-auto lg:block relative cursor-pointer"
+                      src={mark}
+                      alt="Your Company"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex">
                   <div className="flex items-center space-x-4">
@@ -91,14 +93,20 @@ const Header = () => {
                   >
                     <Menu.Items className="flex flex-col absolute -right-4 z-10 w-48 origin-top-right rounded-md bg-gradientblack text-wh py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Link href="/logup" className="text-gray-700">
-                        <p className="cursor-pointer text-sm text-center">Register</p>
+                        <p className="cursor-pointer text-sm text-center">
+                          Register
+                        </p>
                       </Link>
 
                       <Link href="/login" className="text-gray-700">
-                        <p className="cursor-pointer text-sm text-center">Log In</p>
+                        <p className="cursor-pointer text-sm text-center">
+                          Log In
+                        </p>
                       </Link>
 
-                      <p className="text-center font-bold">{(!user) ? 'Tag Name': user.email}</p>
+                      <p className="text-center font-bold">
+                        {!user ? "Tag Name" : user.email}
+                      </p>
 
                       <button
                         onClick={handleLogout}

@@ -8,11 +8,9 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-async function getStaticProps() {
-  
-}
+
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_API_KEY,
+    apiKey: "AIzaSyD7T02N_VBNCV81V0i9ypxjHmWluYM7Jjk",
     authDomain: "estudio-juridico-login-users.firebaseapp.com",
     projectId: "estudio-juridico-login-users",
     storageBucket: "estudio-juridico-login-users.appspot.com",

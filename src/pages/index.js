@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import { Client } from "@notionhq/client";
-import Entry from "@components/Entry";
+import Entry from "@Notion/Entry";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
